@@ -6,6 +6,11 @@ import {
   Input,
   Stack
 } from '@chakra-ui/react';
+import { z } from 'zod';
+
+const schema = z.object({
+  name: z.string().min(3).max(10)
+});
 
 function App() {
   const handleSubmit = (event: any) => {
